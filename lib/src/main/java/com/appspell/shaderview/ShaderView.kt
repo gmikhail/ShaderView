@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import androidx.annotation.AttrRes
 import androidx.annotation.RawRes
 import androidx.annotation.StyleRes
+import com.appspell.shaderview.ext.getRawTextFile
 import com.appspell.shaderview.gl.params.ShaderParams
 import com.appspell.shaderview.gl.params.ShaderParamsImpl
 import com.appspell.shaderview.gl.render.GLQuadRender
@@ -40,6 +41,18 @@ class ShaderView @JvmOverloads constructor(
 
     @RawRes
     var fragmentShaderRawResId: Int? = null
+        set(value) {
+            needToRecreateShaders = true
+            field = value
+        }
+
+    var vertexShader: String? = null
+        set(value) {
+            needToRecreateShaders = true
+            field = value
+        }
+
+    var fragmentShader: String? = null
         set(value) {
             needToRecreateShaders = true
             field = value
@@ -167,6 +180,22 @@ class ShaderView @JvmOverloads constructor(
                     )
                     .apply {
                         // if we have some ShaderParams to set
+                        shaderParams?.apply { params(this) }
+                    }
+                    .build()
+                    .also {
+                        needToRecreateShaders = true
+                    }
+            }
+            // create shader from string
+            fragmentShader?.also {
+                renderer.shader.release()
+                renderer.shader = renderer.shader.newBuilder()
+                    .create(
+                        vertexShader = vertexShader ?: context.resources.getRawTextFile(DEFAULT_VERTEX_SHADER_RESOURCE),
+                        fragmentShader = it
+                    )
+                    .apply {
                         shaderParams?.apply { params(this) }
                     }
                     .build()
