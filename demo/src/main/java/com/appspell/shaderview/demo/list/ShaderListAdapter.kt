@@ -97,7 +97,7 @@ class ShaderListAdapter : RecyclerView.Adapter<ShaderListAdapter.BaseShaderView>
             binding.shaderView.apply {
                 updateContinuously = true // update each frame
                 vertexShaderRawResId = R.raw.quad_tangent_space_vert
-                fragmentShaderRawResId = R.raw.nomral_map
+                fragmentShaderRawResId = R.raw.normal_map
                 shaderParams = ShaderParamsBuilder()
                     .addTexture2D(
                         "uNormalTexture",
@@ -123,7 +123,7 @@ class ShaderListAdapter : RecyclerView.Adapter<ShaderListAdapter.BaseShaderView>
             binding.shaderView.apply {
                 updateContinuously = true // update each frame
                 vertexShaderRawResId = R.raw.quad_tangent_space_vert
-                fragmentShaderRawResId = R.raw.nomral_map
+                fragmentShaderRawResId = R.raw.normal_map
                 shaderParams = ShaderParamsBuilder()
                     .addTexture2D(
                         "uNormalTexture",
