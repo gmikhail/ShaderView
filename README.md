@@ -1,15 +1,24 @@
 ## Changes in this fork
 
-- Added ability to set shader also as a string
+- Added ability to set shader as a string
 
 ```kotlin
 val shaderView = ShaderView(this).apply{
-    // fragmentShaderRawResId = R.raw.fragment_shader
     fragmentShader = getShaderStringFromSomewhere()
+    //fragmentShaderRawResId = R.raw.fragment_shader
 }
 ```
 
 To use this fork add dependency
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
 
 ```gradle
 dependencies {
