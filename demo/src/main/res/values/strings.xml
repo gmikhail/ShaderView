@@ -11,8 +11,8 @@
 
     <string name="shader_name_color_frag">color_frag</string>
     <string name="shader_name_multiple_textures_frag">multiple_textures_frag</string>
-    <string name="shader_name_nomral_map">nomral_map</string>
-    <string name="shader_name_nomral_map_v2">nomral_map_v2</string>
+    <string name="shader_name_normal_map">normal_map</string>
+    <string name="shader_name_normal_map_v2">normal_map_v2</string>
     <string name="shader_name_simple_animation_frag">simple_animation_frag</string>
     <string name="shader_name_color_animated">" color animated"</string>
     <string name="shader_name_animated_texture">animated_texture</string>

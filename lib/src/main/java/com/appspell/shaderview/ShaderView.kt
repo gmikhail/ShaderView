@@ -18,9 +18,9 @@ import com.appspell.shaderview.log.LibLog
 
 private const val OPENGL_VERSION = 3
 
-private const val BIT_PER_CHANEL = 8
-private const val DEPTH_BIT_PER_CHANEL = 16
-private const val STENCIL_BIT_PER_CHANEL = 0
+private const val BIT_PER_CHANNEL = 8
+private const val DEPTH_BIT_PER_CHANNEL = 16
+private const val STENCIL_BIT_PER_CHANNEL = 0
 
 private val DEFAULT_VERTEX_SHADER_RESOURCE = R.raw.quad_vert
 private val DEFAULT_FRAGMENT_SHADER_RESOURCE = R.raw.default_frag
@@ -112,12 +112,12 @@ class ShaderView @JvmOverloads constructor(
 
         // use RGBA_8888 buffer to support transparency
         setEGLConfigChooser(
-            BIT_PER_CHANEL,
-            BIT_PER_CHANEL,
-            BIT_PER_CHANEL,
-            BIT_PER_CHANEL,
-            DEPTH_BIT_PER_CHANEL,
-            STENCIL_BIT_PER_CHANEL
+            BIT_PER_CHANNEL,
+            BIT_PER_CHANNEL,
+            BIT_PER_CHANNEL,
+            BIT_PER_CHANNEL,
+            DEPTH_BIT_PER_CHANNEL,
+            STENCIL_BIT_PER_CHANNEL
         )
 
         setRenderer(renderer)

@@ -93,7 +93,7 @@ class ShaderListAdapter : RecyclerView.Adapter<ShaderListAdapter.BaseShaderView>
 
     class NormalMapShaderViewHolder(binding: ItemShaderBinding) : BaseShaderView(binding.root) {
         init {
-            binding.name.setText(R.string.shader_name_nomral_map)
+            binding.name.setText(R.string.shader_name_normal_map)
             binding.shaderView.apply {
                 updateContinuously = true // update each frame
                 vertexShaderRawResId = R.raw.quad_tangent_space_vert
@@ -119,7 +119,7 @@ class ShaderListAdapter : RecyclerView.Adapter<ShaderListAdapter.BaseShaderView>
 
     class NormalMapShaderViewHolder2(binding: ItemShaderBinding) : BaseShaderView(binding.root) {
         init {
-            binding.name.setText(R.string.shader_name_nomral_map_v2)
+            binding.name.setText(R.string.shader_name_normal_map_v2)
             binding.shaderView.apply {
                 updateContinuously = true // update each frame
                 vertexShaderRawResId = R.raw.quad_tangent_space_vert
