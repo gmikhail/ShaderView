@@ -2,7 +2,7 @@
 
 - Added ability to set shader also as a string
 
-```
+```kotlin
 val shaderView = ShaderView(this).apply{
     // fragmentShaderRawResId = R.raw.fragment_shader
     fragmentShader = getShaderStringFromSomewhere()
@@ -11,7 +11,7 @@ val shaderView = ShaderView(this).apply{
 
 To use this fork add dependency
 
-```
+```gradle
 dependencies {
     implementation 'com.github.gmikhail:ShaderView:main-SNAPSHOT'
 }
@@ -57,7 +57,7 @@ The advantage of this library that you can use ShaderView in your hierarchy as a
 
 **Gradle**
 
-```gralde
+```gradle
 allprojects {
 	repositories {
 		...
