@@ -22,8 +22,6 @@ Thumbs.db
 # IntelliJ
 *.iml
 .idea/*
-!.idea/codeStyles/*
-!.idea/vcs.xml
 
 .gradle
 build/
