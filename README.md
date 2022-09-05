@@ -1,3 +1,26 @@
+## Changes in this fork
+
+- Added ability to set shader also as a string
+
+```
+val shaderView = ShaderView(this).apply{
+    // fragmentShaderRawResId = R.raw.fragment_shader
+    fragmentShader = getShaderStringFromSomewhere()
+}
+```
+
+To use this fork add dependency
+
+```
+dependencies {
+    implementation 'com.github.gmikhail:ShaderView:main-SNAPSHOT'
+}
+```
+
+Below original README
+
+---
+
 # ShaderView
 [![](https://jitpack.io/v/appspell/ShaderView.svg)](https://jitpack.io/#appspell/ShaderView)
 
