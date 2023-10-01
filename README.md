@@ -1,11 +1,11 @@
-## Changes in this fork
+### Changes in this fork
 
-- Added ability to set shader as a string
+- Added ability to directly specify shader string
 
 ```kotlin
 val shaderView = ShaderView(this).apply{
-    fragmentShader = getShaderStringFromSomewhere()
-    //fragmentShaderRawResId = R.raw.fragment_shader
+    fragmentShader = getShaderString()
+    //fragmentShaderRawResId = R.raw.fragment_shader// This also works
 }
 ```
 
